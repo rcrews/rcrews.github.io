@@ -1,10 +1,10 @@
 title: Robert’s blog
-url: "https://rcrews.github.io"
+url: https://rcrews.github.io
 author:
   name: Robert Crews
   email: ""
 description: >-
-  A place to list articles that I've written.
+  A place to list articles that I’ve written.
 
 plugins:
   - jekyll-feed
@@ -15,26 +15,27 @@ minima:
   skin: auto
   social_links:
     - platform: linkedin
-      user_url: "https://www.linkedin.com/in/robertpcrews"
+      user_url: https://www.linkedin.com/in/robertpcrews
       # title:
     - platform: github
-      user_url: "https://github.com/rcrews"
+      user_url: https://github.com/rcrews
       # title:
     - platform: mastodon
-      user_url: "https://norcal.social/@rcrews"
+      user_url: https://norcal.social/@rcrews
       # title:
     - platform: twitter
-      user_url: "https://twitter.com/RobertPCrews"
+      user_url: https://twitter.com/RobertPCrews
       # title:
     - platform: facebook
-      user_url: "https://www.facebook.com/robert.p.crews"
+      user_url: https://www.facebook.com/robert.p.crews
       # title:
 
+strict_front_matter: true
 exclude:
   - docs/
 
 # https://github.com/jekyll/jekyll-seo-tag
-tagline: ""
+tagline: A place for articles I’ve written.
 social:
   name: Robert Crews
   links:
