@@ -5,6 +5,3 @@
 layout: home
 list_title: Articles
 ---
-<!--
-{% sites | json %}
--->
