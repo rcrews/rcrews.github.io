@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>How to Effectively Display Dates and Times on the Web with JavaScript | Robert’s blog</title>
+<title>Use JavaScript to Format Dates and Times for the Web | Robert’s blog</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="How to Effectively Display Dates and Times on the Web with JavaScript" />
+<meta property="og:title" content="Use JavaScript to Format Dates and Times for the Web" />
 <meta name="author" content="Robert Crews" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This article describes a strategy for clarifying meaning when displaying times and dates on web pages. Confusion comes from omitting the time zone and when using an ambiguous digit order for the day and month." />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-02-23T00:00:00-08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="How to Effectively Display Dates and Times on the Web with JavaScript" />
+<meta property="twitter:title" content="Use JavaScript to Format Dates and Times for the Web" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Crews"},"dateModified":"2024-02-23T00:00:00-08:00","datePublished":"2024-02-23T00:00:00-08:00","description":"This article describes a strategy for clarifying meaning when displaying times and dates on web pages. Confusion comes from omitting the time zone and when using an ambiguous digit order for the day and month.","headline":"How to Effectively Display Dates and Times on the Web with JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"https://rcrews.github.io/javascript/2024/02/23/datetime.html"},"url":"https://rcrews.github.io/javascript/2024/02/23/datetime.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Crews"},"dateModified":"2024-02-23T00:00:00-08:00","datePublished":"2024-02-23T00:00:00-08:00","description":"This article describes a strategy for clarifying meaning when displaying times and dates on web pages. Confusion comes from omitting the time zone and when using an ambiguous digit order for the day and month.","headline":"Use JavaScript to Format Dates and Times for the Web","mainEntityOfPage":{"@type":"WebPage","@id":"https://rcrews.github.io/javascript/2024/02/23/datetime.html"},"url":"https://rcrews.github.io/javascript/2024/02/23/datetime.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rcrews.github.io/feed.xml" title="Robert’s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -38,7 +38,7 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">How to Effectively Display Dates and Times on the Web with JavaScript</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Use JavaScript to Format Dates and Times for the Web</h1>
     <p class="post-meta"><time class="dt-published" datetime="2024-02-23T00:00:00-08:00" itemprop="datePublished">
         Feb 23, 2024
       </time></p>
@@ -120,7 +120,7 @@ stamps to represent them unambiguously for each local reader.</li>
 
 <p>As front-end devs, we‘ll write JavaScript that scans the page text for
 these date stamps, and then replaces them with an unambiguous format
-customized and optimized for each site visitor.</p>
+customized for each site visitor.</p>
 
 <h3 id="add-an-event-listener">Add an event listener</h3>
 
@@ -199,7 +199,7 @@ visitors.</li>
 
 <ul>
   <li>Receives the datetime-formatted string</li>
-  <li>Parses it into a Date object</li>
+  <li>Parses it into a <code class="language-plaintext highlighter-rouge">Date</code> object</li>
   <li>Creates a default localized string from the object</li>
   <li>Returns the localized string</li>
 </ul>
@@ -213,7 +213,7 @@ placeholder, though, and improve it later.</p>
 <p>Since our back-end dev did not identify the datestamps with mark-up,
 we’re going to be scanning text for a datetime pattern. Scanning text
 for patterns can be a problem because the text we’re hoping to match
-comes mixed among an enourmous variety of words and character
+comes mixed among an enormous variety of words and character
 constructions. Some people, when confronted with such a problem, think
 “I know, I’ll use regular expressions.”<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> Which is exactly what we’re
 going to do:</p>
@@ -354,7 +354,7 @@ text node from its <code class="language-plaintext highlighter-rouge">textConten
 
 <p>Now we’ll split the string into an array of strings. We’ll split the
 string on the pattern of the datetime string we’re looking for. The
-JavaScript split method takes either a string or a regular expression.
+JavaScript <code class="language-plaintext highlighter-rouge">split</code> method takes either a string or a regular expression.
 In typical use, these separators are discarded:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">Fly, you fools!</span><span class="dl">"</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">/</span><span class="se">\</span><span class="s2">s+/</span><span class="dl">"</span><span class="p">);</span>

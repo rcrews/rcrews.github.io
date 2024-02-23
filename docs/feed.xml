@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://rcrews.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rcrews.github.io/" rel="alternate" type="text/html" /><updated>2024-02-23T13:40:15-08:00</updated><id>https://rcrews.github.io/feed.xml</id><title type="html">Robert’s blog</title><subtitle>A place for articles I’ve written.</subtitle><author><name>Robert Crews</name><email></email></author><entry><title type="html">How to Effectively Display Dates and Times on the Web with JavaScript</title><link href="https://rcrews.github.io/javascript/2024/02/23/datetime.html" rel="alternate" type="text/html" title="How to Effectively Display Dates and Times on the Web with JavaScript" /><published>2024-02-23T00:00:00-08:00</published><updated>2024-02-23T00:00:00-08:00</updated><id>https://rcrews.github.io/javascript/2024/02/23/datetime</id><content type="html" xml:base="https://rcrews.github.io/javascript/2024/02/23/datetime.html"><![CDATA[<p>This article describes a strategy for clarifying meaning when displaying
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://rcrews.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rcrews.github.io/" rel="alternate" type="text/html" /><updated>2024-02-23T15:58:07-08:00</updated><id>https://rcrews.github.io/feed.xml</id><title type="html">Robert’s blog</title><subtitle>A place for articles I’ve written.</subtitle><author><name>Robert Crews</name><email></email></author><entry><title type="html">Use JavaScript to Format Dates and Times for the Web</title><link href="https://rcrews.github.io/javascript/2024/02/23/datetime.html" rel="alternate" type="text/html" title="Use JavaScript to Format Dates and Times for the Web" /><published>2024-02-23T00:00:00-08:00</published><updated>2024-02-23T00:00:00-08:00</updated><id>https://rcrews.github.io/javascript/2024/02/23/datetime</id><content type="html" xml:base="https://rcrews.github.io/javascript/2024/02/23/datetime.html"><![CDATA[<p>This article describes a strategy for clarifying meaning when displaying
 times and dates on web pages. Confusion comes from omitting the time
 zone and when using an ambiguous digit order for the day and month.</p>
 
@@ -73,7 +73,7 @@ stamps to represent them unambiguously for each local reader.</li>
 
 <p>As front-end devs, we‘ll write JavaScript that scans the page text for
 these date stamps, and then replaces them with an unambiguous format
-customized and optimized for each site visitor.</p>
+customized for each site visitor.</p>
 
 <h3 id="add-an-event-listener">Add an event listener</h3>
 
@@ -152,7 +152,7 @@ visitors.</li>
 
 <ul>
   <li>Receives the datetime-formatted string</li>
-  <li>Parses it into a Date object</li>
+  <li>Parses it into a <code class="language-plaintext highlighter-rouge">Date</code> object</li>
   <li>Creates a default localized string from the object</li>
   <li>Returns the localized string</li>
 </ul>
@@ -166,7 +166,7 @@ placeholder, though, and improve it later.</p>
 <p>Since our back-end dev did not identify the datestamps with mark-up,
 we’re going to be scanning text for a datetime pattern. Scanning text
 for patterns can be a problem because the text we’re hoping to match
-comes mixed among an enourmous variety of words and character
+comes mixed among an enormous variety of words and character
 constructions. Some people, when confronted with such a problem, think
 “I know, I’ll use regular expressions.”<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> Which is exactly what we’re
 going to do:</p>
@@ -307,7 +307,7 @@ text node from its <code class="language-plaintext highlighter-rouge">textConten
 
 <p>Now we’ll split the string into an array of strings. We’ll split the
 string on the pattern of the datetime string we’re looking for. The
-JavaScript split method takes either a string or a regular expression.
+JavaScript <code class="language-plaintext highlighter-rouge">split</code> method takes either a string or a regular expression.
 In typical use, these separators are discarded:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">Fly, you fools!</span><span class="dl">"</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">/</span><span class="se">\</span><span class="s2">s+/</span><span class="dl">"</span><span class="p">);</span>
