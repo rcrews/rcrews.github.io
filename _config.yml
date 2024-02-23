@@ -4,13 +4,14 @@ author:
   name: Robert Crews
   email: ""
 description: >-
-  A place to list articles that I’ve written.
+  A place for articles I’ve written.
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
 theme: minima
+show_excerpts: true
 minima:
   skin: auto
   social_links:
@@ -23,16 +24,19 @@ minima:
     - platform: mastodon
       user_url: https://norcal.social/@rcrews
       # title:
-    - platform: twitter
-      user_url: https://twitter.com/RobertPCrews
-      # title:
-    - platform: facebook
-      user_url: https://www.facebook.com/robert.p.crews
-      # title:
+    # - platform: twitter
+    #   user_url: https://twitter.com/RobertPCrews
+    #   # title:
+    # - platform: facebook
+    #   user_url: https://www.facebook.com/robert.p.crews
+    #   # title:
 
 strict_front_matter: true
 exclude:
   - docs/
+
+# kramdown:
+#   syntax_highlighter: coderay
 
 # https://github.com/jekyll/jekyll-seo-tag
 tagline: A place for articles I’ve written.
