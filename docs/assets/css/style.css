@@ -983,4 +983,8 @@ table td {
   margin-right: 1rem;
 }
 
+.post-title, .site-title {
+  letter-spacing: -0.5px;
+}
+
 /*# sourceMappingURL=style.css.map */
