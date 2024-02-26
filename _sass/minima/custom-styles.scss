@@ -1,2 +1,12 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+.post-title, .site-title {
+  letter-spacing: -0.5px;
+}
+
+.post-subtitle {
+  color: #999;
+  font-size: 1.2rem;
+  font-style: italic;
+}
