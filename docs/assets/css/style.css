@@ -979,12 +979,18 @@ table td {
     width: calc(50% - 30px / 2);
   }
 }
-.CodeRay .line-numbers {
-  margin-right: 1rem;
-}
-
 .post-title, .site-title {
   letter-spacing: -0.5px;
+}
+
+.post-subtitle {
+  color: #999;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.CodeRay .line-numbers {
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
